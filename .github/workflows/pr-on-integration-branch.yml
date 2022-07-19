@@ -151,9 +151,9 @@ jobs:
             #       SLACK_USERNAME: DongHyun
             #       SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
             #       - name: Notify slack pr open
-            - name : Slack Notification on ended
+            - name: Notify slack pr open
               env: 
-                SLACK_WEBHOOK_URL : ${{ secrets.SLACK_WEBHOOK }}
+                SLACK_WEBHOOK_URL : ${{ secrets.SLACK_WEBHOOK_URL }}
                 PULL_REQUEST_NUMBER : ${{ github.event.pull_request.number }}
                 PULL_REQUEST_TITLE : ${{ github.event.pull_request.title }}
                 PULL_REQUEST_AUTHOR_NAME : ${{ github.event.pull_request.user.login }}
@@ -164,10 +164,10 @@ jobs:
                 PULL_REQUEST_COMPARE_BRANCH_NAME : ${{ github.event.pull_request.head.ref }}
                 PULL_REQUEST_BASE_BRANCH_OWNER: ${{ github.event.pull_request.base.repo.owner.login }}
                 PULL_REQUEST_BASE_BRANCH_NAME : ${{ github.event.pull_request.base.ref }}
-                IS_SEND_HERE_MENTION : true
+                IS_SEND_HERE_MENTION : false
                 MAKE_PRETTY : true
                 MAKE_COMPACT : false
                 IS_PR_FROM_FORK: false
-                SEND_USER_ID_MENTIONS : ABCDE12345,AAABBBCCCC
-                SEND_GROUP_ID_MENTIONS : GROUPIDDDD,GGGGROUPID
+                SEND_USER_ID_MENTIONS :
+                SEND_GROUP_ID_MENTIONS : 
               uses: jun3453/slack-pr-open-notification-action@v1.3.0
