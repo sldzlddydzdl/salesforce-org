@@ -165,7 +165,7 @@ jobs:
                 PULL_REQUEST_BASE_BRANCH_OWNER: ${{ github.event.pull_request.base.repo.owner.login }}
                 PULL_REQUEST_BASE_BRANCH_NAME : ${{ github.event.pull_request.base.ref }}
                 IS_SEND_HERE_MENTION : true
-                MAKE_PRETTY : false
+                MAKE_PRETTY : true
                 MAKE_COMPACT : false
                 IS_PR_FROM_FORK: false
                 SEND_USER_ID_MENTIONS : ABCDE12345,AAABBBCCCC
