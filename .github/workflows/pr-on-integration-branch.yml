@@ -141,7 +141,7 @@ jobs:
               run: sfdx force:mdapi:deploy -d "changed-sources/destructiveChanges" --checkonly --ignorewarnings 
 
                # Slack Notification End Message to slack-github-action-test
-            - name: Slack Notification on start
+            - name: Slack Notification on ended
               uses: rtCamp/action-slack-notify@v2
               env:
                   SLACK_CHANNEL: slack-github-action-test
