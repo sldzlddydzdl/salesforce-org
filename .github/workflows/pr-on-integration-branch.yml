@@ -64,7 +64,7 @@ jobs:
               env:
                   SLACK_CHANNEL: slack-github-action-test
                   SLACK_COLOR: ${{ job.status }}
-                  SLACK_MESSAGE: ${{ job.status }} "notification start"
+                  SLACK_MESSAGE:  “Job Status for ${{ steps.extract_branch.outputs.branch }} : ${{ job.status }}”
                   SLACK_TITLE: “Deploy is starting”
                   SLACK_USERNAME: DongHyun
                   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}     
@@ -139,7 +139,7 @@ jobs:
 
             - name: 'Deploy destructive changes (if any)'
               run: sfdx force:mdapi:deploy -d "changed-sources/destructiveChanges" --checkonly --ignorewarnings 
-              
+
             - name: Extract branch name
               shell: bash
               run: echo “##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})”
@@ -151,7 +151,7 @@ jobs:
               env:
                   SLACK_CHANNEL: slack-github-action-test
                   SLACK_COLOR: ${{ job.status }}
-                  SLACK_MESSAGE: ${{ job.status }} "notification ended"
+                  SLACK_MESSAGE:  “Job Status for ${{ steps.extract_branch.outputs.branch }} : ${{ job.status }}”
                   SLACK_TITLE: “Deploy is Ended”
                   SLACK_USERNAME: DongHyun
                   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
