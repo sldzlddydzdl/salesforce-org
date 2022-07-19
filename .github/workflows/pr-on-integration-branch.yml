@@ -140,18 +140,13 @@ jobs:
             - name: 'Deploy destructive changes (if any)'
               run: sfdx force:mdapi:deploy -d "changed-sources/destructiveChanges" --checkonly --ignorewarnings 
 
-            - name: Extract branch name
-              shell: bash
-              run: echo “##[set-output name=branch;]$(echo ${GITHUB_REF#refs/heads/})”
-              id: extract_branch
-
                # Slack Notification End Message to slack-github-action-test
             - name: Slack Notification on ended
               uses: rtCamp/action-slack-notify@v2
               env:
                   SLACK_CHANNEL: slack-github-action-test
                   SLACK_COLOR: ${{ job.status }}
-                  SLACK_MESSAGE:  “Job Status for ${{ steps.extract_branch.outputs.branch }} : ${{ job.status }}”
+                  SLACK_MESSAGE:  ${{ job.status }} "Notification"
                   SLACK_TITLE: “Deploy is Ended”
                   SLACK_USERNAME: DongHyun
                   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
