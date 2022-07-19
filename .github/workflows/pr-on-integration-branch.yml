@@ -64,7 +64,7 @@ jobs:
               env:
                   SLACK_CHANNEL: slack-github-action-test
                   SLACK_COLOR: ${{ job.status }}
-                  SLACK_MESSAGE: ${{ job.status }} "notification start"
+                  SLACK_MESSAGE:  “Job Status for ${{ steps.extract_branch.outputs.branch }} : ${{ job.status }}”
                   SLACK_TITLE: “Deploy is starting”
                   SLACK_USERNAME: DongHyun
                   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
@@ -146,7 +146,7 @@ jobs:
               env:
                   SLACK_CHANNEL: slack-github-action-test
                   SLACK_COLOR: ${{ job.status }}
-                  SLACK_MESSAGE: ${{ job.status }} "notification ended"
+                  SLACK_MESSAGE:  “Job Status for ${{ steps.extract_branch.outputs.branch }} : ${{ job.status }}”
                   SLACK_TITLE: “Deploy is Ended”
                   SLACK_USERNAME: DongHyun
                   SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
