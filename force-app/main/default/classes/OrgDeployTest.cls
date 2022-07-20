@@ -10,6 +10,7 @@ public with sharing class OrgDeployTest {
         System.assertEquals(6, 6, 'true');
         System.assertEquals(7, 7, 'true');
         System.assertEquals(8, 8, 'true');
+        System.assertEquals(9, 9, 'true');
 
         
         
