@@ -2,7 +2,8 @@
 public with sharing class DeployTest {
     @IsTest
     public static void DeployTest(){
-        System.assertEquals(1, 1);
-        System.assertEquals(2, 2);
+        System.assertEquals(1, 1, 'true');
+        System.assertEquals(2, 2, 'true');
+        System.assertEquals(3, 3, 'true');
     }
 }
