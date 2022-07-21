@@ -58,16 +58,16 @@ jobs:
                   TESTS=$(cat testsToRun.txt)       
                   echo "APEX_TESTS=$TESTS" >> $GITHUB_ENV
                   
-                # Slack Notification Start Message to slack-github-action-test
+              # Slack Notification Start Message to slack-github-action-test
             - name: Slack Notification on start
               uses: rtCamp/action-slack-notify@v2
               env:
                   SLACK_CHANNEL: slack-github-action-test
                   SLACK_COLOR: ${{ job.status }}
-                  SLACK_MESSAGE:  ${{ job.status }} "Notifitcation"
+                  SLACK_MESSAGE: ${{ job.status }} "Notifitcation"
                   SLACK_TITLE: “Deploy is starting”
                   SLACK_USERNAME: DongHyun
-                  SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}     
+                  SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
             # Install Salesforce CLI
             - name: 'Install Salesforce CLI'
               run: |
@@ -146,11 +146,10 @@ jobs:
             #   env:
             #       SLACK_CHANNEL: slack-github-action-test
             #       SLACK_COLOR: ${{ job.status }}
-            #       SLACK_MESSAGE:  ${{ job.status }} "Notification"
+            #       SLACK_MESSAGE: ${{ job.status }} "Notification"
             #       SLACK_TITLE: “Deploy is Ended”
             #       SLACK_USERNAME: DongHyun
             #       SLACK_WEBHOOK: ${{ secrets.SLACK_WEBHOOK }}
-            #       - name: Notify slack pr open
             - name: Notify slack pr open
               env: 
                 SLACK_WEBHOOK_URL : ${{ secrets.SLACK_WEBHOOK }}
@@ -172,7 +171,7 @@ jobs:
                 SEND_GROUP_ID_MENTIONS : 
               uses: jun3453/slack-pr-open-notification-action@v1.3.0
 
-            ## python installation
+              ## python installation
             - name: Set up Python 3.10
               uses: actions/setup-python@v3
               with:
@@ -192,6 +191,3 @@ jobs:
               run : |
                 python3 -m pip install requests
                 python3 json-python-run.py
-
-          
-
