@@ -1,0 +1,22 @@
+{
+  "status": 0,
+  "result": {
+    "id": "00DN0000000VbmfMAC",
+    "devHubId": "rlaehdgu1@naver.com",
+    "accessToken": "00DN0000000Vbmf!AQ4AQAZhUCyDZBhDK62BvtO73tRbyAwV5FVJdFyehQcCQBVIfAgXumdHcJSkzam0w6Q5Il0eHui9T9idV9H4emnbFFkB8Xuk",
+    "instanceUrl": "https://momentum-drive-9079-dev-ed.my.salesforce.com",
+    "username": "test-0h1obscempr7@example.com",
+    "clientId": "PlatformCLI",
+    "status": "Active",
+    "expirationDate": "2022-07-27",
+    "createdBy": "rlaehdgu1@naver.com",
+    "edition": "Developer",
+    "orgName": "pgonzalez company",
+    "createdDate": "2022-07-20T06:51:02.000+0000",
+    "sfdxAuthUrl": "force://PlatformCLI::5Aep861Py1mmUCbH64kDJqXv3DcdQKCclwpVDOTeIHxzxOiydFeA.4vCyrqy7mjOKADQ5jELzCbzK_aufdhxPRS@momentum-drive-9079-dev-ed.my.salesforce.com",
+    "alias": "integration"
+  },
+  "warnings": [
+    "This command will expose sensitive information that allows for subsequent activity using your current authenticated session.\nSharing this information is equivalent to logging someone in under the current credential, resulting in unintended access and escalation of privilege.\nFor additional information, please review the authorization section of the https://developer.salesforce.com/docs/atlas.en-us.234.0.sfdx_dev.meta/sfdx_dev/sfdx_dev_auth_web_flow.htm"
+  ]
+}
