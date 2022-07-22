@@ -7,5 +7,6 @@ public with sharing class DeployTest {
         System.assertEquals(3, 3, 'true');
         System.assertEquals(4, 4, 'true');
         System.assertEquals(5, 5, 'true');
+        System.assertEquals(6, 6, 'true');
     }
 }
